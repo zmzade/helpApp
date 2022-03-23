@@ -6,10 +6,9 @@ export default function App() {
   const [data, setData] = React.useState("");
 
   React.useEffect(() => {
-    fetch("https://localhost:9000/api")
+    fetch("http://192.168.0.143:9000/api")
       .then((res) => res.json())
       .then((data) => {
-        console.log(data.message);
         setData(data.message);
       });
   }, []);
